@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Screen breakpoint
+$PC-large-width: 1280px;
+$PC-normal-width: 1024px;
+$TABLET-normal-width: 768px;
+$TABLET-small-width: 640px;
+$MOBILE-width: 0px;
+
+//  font family
+$primary-font: "Be Vietnam Pro";
+
+@mixin largePC {
+  @media screen and (min-width: $PC-large-width) {
+    @content;
+  }
+}
+
+@mixin normalPC {
+  @media screen and (min-width: $PC-normal-width) {
+    @content;
+  }
+}
+
+@mixin normalTABLET {
+  @media screen and (min-width: $TABLET-normal-width) {
+    @content;
+  }
+}
+
+@mixin smallTABLET {
+  @media screen and (min-width: $TABLET-small-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: $MOBILE-width) {
+    @content;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@mixin scroll {
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: overlay;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+    height: 2px;
+    overflow: overlay;
+  }
+}
+
+@mixin scrollHidden {
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: overlay;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 1px;
+    height: 1px;
+    overflow: overlay;
+  }
+}
+
+.scroll {
+  @include scroll();
+}
+
+.scrollHidden {
+  @include scrollHidden();
+}
+
+body {
+  font-family: $primary-font;
+  box-sizing: border-box;
+}
+
+.container__custom {
+  max-width: 1400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
