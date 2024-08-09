@@ -88,17 +88,22 @@ $primary-font: "Be Vietnam Pro";
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: $primary-font;
+  box-sizing: border-box;
+}
+
 .scroll {
   @include scroll();
 }
 
 .scrollHidden {
   @include scrollHidden();
-}
-
-body {
-  font-family: $primary-font;
-  box-sizing: border-box;
 }
 
 .container__custom {

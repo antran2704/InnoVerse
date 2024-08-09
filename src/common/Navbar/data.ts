@@ -9,17 +9,17 @@ const navbarItems: INavbarItem[] = [
   {
     id: "products",
     label: "Products",
-    link: "/",
+    link: "/products",
   },
   {
     id: "about",
     label: "About",
-    link: "/",
+    link: "/about-us",
   },
   {
     id: "contact",
     label: "Contact",
-    link: "/",
+    link: "/contact",
   },
 ];
 

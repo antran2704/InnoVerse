@@ -2,12 +2,16 @@
 
 import clsx from "clsx";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
+import { LOGO_IMAGE } from "~/common/imgae";
 
 import navbarItems from "~/common/Navbar/data";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   const [openNavbar, setOpenNavbar] = useState<boolean>(false);
 
   const onModal = () => {
@@ -22,15 +26,15 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-[999]">
-      <div className="w-full  py-5 bg-white/50 backdrop-blur-md shadow-md">
+      <div className="w-full py-2 bg-white/50 backdrop-blur-md shadow-md">
         <div className="container__custom flex items-center">
           <div className="lg:w-2/12 flex items-center">
             <Link href="/">
               <img
-                src="/logo.png"
+                src={LOGO_IMAGE}
                 alt="InnoVerse Logo"
                 title="InnoVerse Logo"
-                className="min-w-[100px] w-[100px] h-[80px] object-contain object-center"
+                className="min-w-[100px] w-[100px] h-[60px] object-contain object-center"
                 width={100}
                 height={100}
                 loading="lazy"
@@ -44,7 +48,10 @@ const Navbar = () => {
               <li key={item.id}>
                 <Link
                   href={item.link}
-                  className="lg:text-lg md:text-base capitalize block px-5 py-2 font-semibold hover:text-primary-100 transition-all ease-linear duration-100">
+                  className={clsx(
+                    "text-lg capitalize block px-5 py-2 font-semibold hover:text-primary-100 transition-all ease-linear duration-100",
+                    [pathname === item.link && "text-primary-200"],
+                  )}>
                   {item.label}
                 </Link>
               </li>
@@ -78,7 +85,7 @@ const Navbar = () => {
           )}>
           <Link href="/" className="block p-5">
             <img
-              src="/logo.png"
+              src={LOGO_IMAGE}
               alt="InnoVerse Logo"
               title="InnoVerse Logo"
               className="min-w-[100px] w-[100px] h-[80px] object-contain object-center"
@@ -93,7 +100,10 @@ const Navbar = () => {
               <li key={item.id}>
                 <Link
                   href={item.link}
-                  className="text-lg capitalize block px-5 py-2 font-semibold hover:text-primary-100 transition-all ease-linear duration-100">
+                  className={clsx(
+                    "text-lg capitalize block px-5 py-2 font-semibold hover:text-primary-100 transition-all ease-linear duration-100",
+                    [pathname === item.link && "text-primary-200"],
+                  )}>
                   {item.label}
                 </Link>
               </li>

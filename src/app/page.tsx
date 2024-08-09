@@ -2,39 +2,83 @@
 
 import { CiCircleCheck } from "react-icons/ci";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 import productList from "~/common/product";
 import { ProductItem } from "~/components/Product";
 import { IProduct } from "~/interface/Product";
-import { Collapse } from "~/components/Core";
+import { Collapse, HeaderContent } from "~/components/Core";
+import listCustomer from "~/common/customer";
 
 export default function Home() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    breakpoints: {
-      "(min-width: 1024px)": {
-        slidesToScroll: 3,
-      },
-      "(min-width: 768px)": {
-        slidesToScroll: 2,
-      },
-      "(min-width: 0px)": {
-        slidesToScroll: 1,
+  const [feedbackRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      breakpoints: {
+        "(min-width: 1024px)": {
+          slidesToScroll: 3,
+        },
+        "(min-width: 768px)": {
+          slidesToScroll: 2,
+        },
+        "(min-width: 0px)": {
+          slidesToScroll: 1,
+        },
       },
     },
-  });
+    [
+      Autoplay({
+        delay: 10000,
+        stopOnMouseEnter: true,
+        stopOnInteraction: false,
+      }),
+    ],
+  );
+
+  const [customerRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      duration: 10000,
+      slidesToScroll: 1,
+    },
+    [
+      Autoplay({
+        delay: 0,
+        stopOnMouseEnter: true,
+        stopOnInteraction: false,
+      }),
+    ],
+  );
 
   return (
     <div className="container__custom">
-      {/* Products */}
-      <section className="py-5">
-        <div>
-          <h1 className="md:text-3xl text-2xl text-center font-semibold">
-            Our Product
-          </h1>
-          <span className="block w-[100px] h-1 bg-primary-200 rounded-lg mx-auto my-1"></span>
+      {/* Banner */}
+      <section>
+        <div className="lg:h-[500px] md:h-[400px] h-[300px] relative">
+          <img
+            src="/images/banner.png"
+            alt="banner"
+            title="banner"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+            <div className="text-center">
+              <h1 className="lg:text-6xl md:text-5xl text-4xl text-white font-bold">
+                InnoVerse
+              </h1>
+              <p className="lg:text-xl md:text-lg text-base text-white">
+                We provide the best products and services
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
+
+      {/* Products */}
+      <section id="product" className="py-5">
+        <HeaderContent title={"Our Product"} />
 
         <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 py-10 gap-5">
           {productList.map((item: IProduct, index: number) => (
@@ -44,13 +88,8 @@ export default function Home() {
       </section>
 
       {/* Why choose */}
-      <section className="py-5">
-        <div>
-          <h2 className="md:text-3xl text-2xl text-center font-semibold">
-            Why choose InnoVerse
-          </h2>
-          <span className="block w-[100px] h-1 bg-primary-200 rounded-lg mx-auto my-1"></span>
-        </div>
+      <section id="why" className="py-5">
+        <HeaderContent title={"Why choose InnoVerse"} />
 
         <div className="flex md:flex-row flex-col items-center justify-between py-10 gap-10">
           <ul className="md:w-1/2 w-full flex flex-col list-disc gap-5">
@@ -103,13 +142,8 @@ export default function Home() {
       </section>
 
       {/* Static */}
-      <section className="py-5">
-        <div>
-          <h2 className="md:text-3xl text-2xl text-center font-semibold">
-            Statistics
-          </h2>
-          <span className="block w-[100px] h-1 bg-primary-200 rounded-lg mx-auto my-1"></span>
-        </div>
+      <section id="statistics" className="py-5">
+        <HeaderContent title={"Statistics"} />
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 pt-5 text-center">
           <div className="p-4">
@@ -192,15 +226,10 @@ export default function Home() {
       </section>
 
       {/* Feed back */}
-      <section className="py-10">
-        <div>
-          <h2 className="md:text-3xl text-2xl text-center font-semibold">
-            CUSTOMER FEEDBACK
-          </h2>
-          <span className="block w-[100px] h-1 bg-primary-200 rounded-lg mx-auto my-1"></span>
-        </div>
+      <section id="feedback" className="py-10">
+        <HeaderContent title={"Feedback"} />
 
-        <div className="pt-5 overflow-hidden" ref={emblaRef}>
+        <div className="pt-5 overflow-hidden" ref={feedbackRef}>
           <div className="flex items-center md:px-5 md:gap-5">
             <div className="lg:min-w-[33.333333%] md:min-w-[50%] min-w-full">
               <div className="h-full bg-gray-100 p-8 rounded-md">
@@ -298,17 +327,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Frequently Asked Questions */}
-      <section className="py-5">
-        <div>
-          <h2 className="md:text-3xl text-2xl text-center font-semibold">
-            Frequently Asked Questions
-          </h2>
-          <span className="block w-[100px] h-1 bg-primary-200 rounded-lg mx-auto my-1"></span>
-        </div>
+      {/* Customer */}
+      <section id="customer" className="py-10">
+        <HeaderContent title={"Customer"} />
 
-        <div>
-          <Collapse />
+        <div className="pt-10 overflow-hidden" ref={customerRef}>
+          <div className="flex items-center md:px-5 md:gap-5">
+            {listCustomer.map((item, index) => (
+              <div
+                key={index}
+                className="lg:min-w-[16.666667%;] md:min-w-[25%] min-w-[33.333333%] h-[80px]">
+                <img
+                  alt="customer"
+                  title="customer"
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                  src={item}
+                  className="w-full h-full object-contain object-center"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions */}
+      <section className="py-10">
+        <HeaderContent title={"Frequently Asked Questions"} />
+
+        <div className="py-10">
+          <Collapse
+            title="Products and Services"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates similique explicabo fuga aspernatur minima voluptas sint ipsum debitis, nemo perferendis tempore eligendi nam cumque totam ab eaque dolorem expedita?"
+          />
+          <Collapse
+            title="Technical Support and Troubleshooting"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates similique explicabo fuga aspernatur minima voluptas sint ipsum debitis, nemo perferendis tempore eligendi nam cumque totam ab eaque dolorem expedita?"
+          />
+          <Collapse
+            title="Careers and Employment"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates similique explicabo fuga aspernatur minima voluptas sint ipsum debitis, nemo perferendis tempore eligendi nam cumque totam ab eaque dolorem expedita?"
+          />
+          <Collapse
+            title="Security and Privacy"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates similique explicabo fuga aspernatur minima voluptas sint ipsum debitis, nemo perferendis tempore eligendi nam cumque totam ab eaque dolorem expedita?"
+          />
         </div>
       </section>
     </div>
