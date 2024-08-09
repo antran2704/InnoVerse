@@ -1,16 +1,19 @@
+"use client";
+
+import clsx from "clsx";
+import { CiCircleCheck } from "react-icons/ci";
+import { HeaderContent } from "~/components/Core";
+
 const AboutUsPage = () => {
   return (
-    <div className="container__custom py-10">
+    <div className="container__custom">
       <section className="text-gray-600 body-font p-5">
         <div className="container px-5 py-10 mx-auto">
           <div className="flex lg:flex-row flex-col items-center w-full mb-10 gap-10">
             <div className="lg:w-1/2 w-full">
-              <div className="flex flex-col lg:items-start items-center justify-center w-full mb-8">
-                <h1 className="md:text-4xl sm:text-3xl text-2xl font-cormorantGaramond font-bold mb-2 text-gray-900 uppercase">
-                  About Furni Design
-                </h1>
-                <div className="h-1 w-20 bg-dark rounded"></div>
-              </div>
+              <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold mb-2 text-gray-900 lg:text-left text-center capitalize">
+                About InnoVerse
+              </h1>
               <div className="w-full">
                 <p
                   data-aos="fade-right"
@@ -28,11 +31,11 @@ const AboutUsPage = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2 w-full rounded-md overflow-hidden">
+            <div className="md:w-1/2 w-3/4 rounded-md overflow-hidden">
               <img
                 width="100"
                 height="100"
-                className="object-contain object-center w-full lg:h-[600px] md:h-[500px] h-[400px]"
+                className="object-fill object-center w-full max-h-[600px] rounded-lg overflow-hidden"
                 src="/images/about_us/1.jpg"
                 alt="stats"
               />
@@ -41,20 +44,20 @@ const AboutUsPage = () => {
         </div>
       </section>
 
+      {/* Vision */}
       <section className="bg-[#f0ede9] text-gray-600 rounded-md body-font p-5">
         <div className="container px-5 py-10 mx-auto">
           <div className="flex lg:flex-row-reverse flex-col items-center w-full mb-10 gap-10">
             <div className="lg:w-1/2 w-full">
-              <div
-                className="flex flex-col lg:items-end items-center justify-center w-full mb-8">
-                <h2 className="md:text-4xl sm:text-3xl text-2xl font-cormorantGaramond font-bold mb-2 text-gray-900 uppercase">
-                  VISION
-                </h2>
-                <div className="h-1 w-20 bg-dark rounded"></div>
-              </div>
-              <div className="w-full">
-                <p
-                  className="leading-relaxed text-gray-500 text-justify">
+              <h2
+                className={clsx(
+                  "md:text-3xl text-2xl capitalize font-semibold lg:text-right text-center",
+                )}>
+                Vision
+              </h2>
+
+              <div className="w-full pt-5">
+                <p className="leading-relaxed text-gray-500 text-justify">
                   Furni Design will be the perfect choice for those looking to
                   trust a strong team of architects, interior designers,
                   engineers, and skilled machinists to create and construct
@@ -68,17 +71,17 @@ const AboutUsPage = () => {
                   not the actual production of furniture, at Furni Depot, we are
                   here to take care of the entire process from designing to
                   producing the interior products according to your
-                  specifications. That why so many customers choose Furni
-                  Depot to be their partner in providing quality solutions.
+                  specifications. That why so many customers choose Furni Depot
+                  to be their partner in providing quality solutions.
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2 w-full rounded-md border-2 shadow-lg overflow-hidden">
+            <div className="lg:w-1/2 w-3/4">
               <img
                 width="100"
                 height="100"
-                className="object-contain object-center w-full lg:h-[600px] md:h-[500px] h-[400px]"
-                src="/images/about_us/2.jpg"
+                className="object-fill object-center w-full max-h-[600px] rounded-lg overflow-hidden"
+                src="/images/about_us/vision.jpg"
                 alt="stats"
               />
             </div>
@@ -86,20 +89,13 @@ const AboutUsPage = () => {
         </div>
       </section>
 
+      {/* Brand message */}
       <section className="text-gray-600 body-font pt-10">
         <div className="container px-5 py-10 mx-auto">
           <div className="flex flex-col items-center w-full mb-10 gap-10">
             <div className="lg:w-3/4 w-full">
-              <div
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                className="flex flex-col items-center justify-center w-full mb-8">
-                <h2 className="md:text-4xl sm:text-3xl text-2xl font-cormorantGaramond font-bold mb-2 text-gray-900 uppercase">
-                  BRAND MESSAGE
-                </h2>
-                <div className="h-1 w-20 bg-dark rounded"></div>
-              </div>
-              <div className="w-full">
+              <HeaderContent title={"Brand Message"} align="center" border />
+              <div className="w-full pt-5">
                 <p className="leading-relaxed text-[#5a6066] text-justify">
                   At Furni Design, we value creativity and uniqueness above all
                   else. Our professional team will create a product that
@@ -110,16 +106,16 @@ const AboutUsPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center w-full md:h-[600px] h-[400px] gap-2">
+            <div className="flex items-center justify-center w-full md:h-[600px] gap-2">
               <div
                 data-aos="fade-right"
                 data-aos-duration="1000"
-                className="lg:w-1/2 w-full h-full rounded-md overflow-hidden">
+                className="lg:w-1/2 w-3/4">
                 <img
                   width="100"
                   height="100"
-                  className="object-fill object-left w-full h-full"
-                  data-src="/about_us/4.png"
+                  className="object-fill object-center w-full max-h-[600px] rounded-lg overflow-hidden"
+                  src="/images/about_us/brandMessage.jpg"
                   alt="stats"
                 />
               </div>
@@ -127,107 +123,56 @@ const AboutUsPage = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[rgb(132,172,192)] text-gray-600 body-font pt-10">
-        <div className="container px-5 py-10 mx-auto">
-          <div className="flex flex-col items-center w-full mb-10 gap-10">
-            <div className="lg:w-3/4 w-full">
-              <div
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                className="flex flex-col items-center justify-center w-full mb-8">
-                <h2 className="md:text-4xl sm:text-3xl text-2xl font-cormorantGaramond font-bold mb-2 text-white uppercase">
-                  DESIGN Criteria
-                </h2>
-                <div className="h-1 w-20 bg-white rounded"></div>
-              </div>
-              <div className="w-full">
-                <p
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                  className="leading-relaxed text-white text-justify">
-                  Always strive to offer the best customer service experience
-                  possible, by actively listening to the ideas and preferences
-                  of customers.
-                </p>
-                <p
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                  className="leading-relaxed text-white text-justify pt-3">
-                  Create an interior space that is tailored to their individual
-                  needs and desires, providing a comprehensive interior design
-                  and construction solution at a competitive cost. Explore and
-                  innovate with the latest interior decoration trends, to ensure
-                  that there is something suitable for all customers.
-                </p>
-                <p
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                  className="leading-relaxed text-white text-justify pt-3">
-                  Synchronize the design stage with the direct production of
-                  furniture at the workshop, allowing for a diversified range of
-                  models for customers to choose from while keeping
-                  cost-effectiveness in mind.
-                </p>
-              </div>
-              <div className="flex items-center justify-center mt-10 gap-5">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  className="lg:w-1/2 w-full rounded-md overflow-hidden">
-                  <img
-                    width="100"
-                    height="100"
-                    className="object-cover object-center w-full h-[400px]"
-                    data-src="/about_us/5.png"
-                    alt="stats"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="container w-full py-10 px-5 mx-auto">
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          className="flex flex-col items-center justify-center w-full mb-8">
-          <h2 className="md:text-4xl sm:text-3xl text-2xl font-cormorantGaramond font-bold mb-2 text-gray-900 uppercase">
-            Why Choose Furni Design
-          </h2>
-          <div className="h-1 w-20 bg-dark rounded"></div>
-        </div>
-        <div className="flex md:flex-row flex-col items-center justify-between mt-5 gap-10">
-          <ul className="md:w-6/12 w-full flex flex-col items-start text-base md:gap-3 gap-4">
-            <li data-aos="fade-right" className="flex items-start gap-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="min-w-[30px] h-6">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              test
+      {/* Why choose */}
+      <section id="why" className="py-5">
+        <HeaderContent title={"Why choose InnoVerse"} border />
+
+        <div className="flex md:flex-row flex-col items-center justify-between py-10 gap-10">
+          <ul className="md:w-1/2 w-full flex flex-col list-disc gap-5">
+            <li className="flex items-start lg:text-lg text-base gap-5">
+              <CiCircleCheck className="min-w-6 size-6" />
+              <p>
+                <strong>Innovative Products</strong>: Cutting-edge products and
+                solutions.
+              </p>
+            </li>
+            <li className="flex items-start lg:text-lg text-base gap-5">
+              <CiCircleCheck className="min-w-6 size-6" />
+              <p>
+                <strong>Reliability</strong>: High performance and durability.
+              </p>
+            </li>
+            <li className="flex items-start lg:text-lg text-base gap-5">
+              <CiCircleCheck className="min-w-6 size-6" />
+              <p>
+                <strong>User Experience</strong>: Intuitive and easy-to-use
+                interfaces.
+              </p>
+            </li>
+            <li className="flex items-start lg:text-lg text-base gap-5">
+              <CiCircleCheck className="min-w-6 size-6" />
+              <p>
+                <strong>Support</strong>:Excellent customer service and support.
+              </p>
+            </li>
+            <li className="flex items-start md:text-lg text-base gap-5">
+              <CiCircleCheck className="min-w-6 size-6" />
+              <p>
+                <strong>Cost</strong>:Competitive pricing and good value.
+              </p>
             </li>
           </ul>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
-            className="md:w-6/12 w-full">
+
+          <div className="md:w-1/2 w-3/4">
             <img
-              width="100"
-              height="100"
-              data-src="/about_us/6.jpg"
-              alt="image"
-              title="image"
-              className="w-full"
+              className="w-full object-contain object-center"
+              src="/images/whyChoose.png"
+              width={100}
+              height={100}
+              alt="whyChoose"
+              title="why choose"
+              loading="lazy"
             />
           </div>
         </div>

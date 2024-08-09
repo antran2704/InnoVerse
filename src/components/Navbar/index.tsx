@@ -80,7 +80,7 @@ const Navbar = () => {
 
         <div
           className={clsx(
-            "relative sm:w-2/4 w-3/4 h-full bg-slate-200 transition-all ease-linear duration-100 z-20",
+            "relative sm:w-2/4 w-3/4 h-full bg-white transition-all ease-linear duration-100 z-20",
             [openNavbar ? "translate-x-0" : "-translate-x-full"],
           )}>
           <Link href="/" className="block p-5">
