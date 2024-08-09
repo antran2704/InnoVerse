@@ -22,9 +22,8 @@ const ProductItem = (props: Props) => {
         />
       </Link>
       <Link href={product.path} className="block px-3 py-5">
-        <h2 className="text-gray-900 title-font text-base font-medium line-clamp-3">
+        <h2 className="text-gray-900 title-font sm:text-lg text-base font-medium line-clamp-3">
           {product.title}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita adipisci est ab repudiandae. Odio non consectetur aspernatur aliquid ex omnis veniam iste repellat aperiam! Aperiam debitis dolor corporis architecto quia.
         </h2>
       </Link>
     </div>

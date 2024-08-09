@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <div className="container__custom">
       {/* Banner */}
-      <section>
+      <section className="md:mx-0 -mx-5">
         <div className="lg:h-[500px] md:h-[400px] h-[300px] relative">
           <img
             src="/images/banner.png"
@@ -78,7 +78,7 @@ export default function Home() {
 
       {/* Products */}
       <section id="product" className="py-5">
-        <HeaderContent title={"Our Product"} />
+        <HeaderContent border title={"Our Product"} />
 
         <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 py-10 gap-5">
           {productList.map((item: IProduct, index: number) => (
@@ -89,7 +89,7 @@ export default function Home() {
 
       {/* Why choose */}
       <section id="why" className="py-5">
-        <HeaderContent title={"Why choose InnoVerse"} />
+        <HeaderContent border title={"Why choose InnoVerse"} />
 
         <div className="flex md:flex-row flex-col items-center justify-between py-10 gap-10">
           <ul className="md:w-1/2 w-full flex flex-col list-disc gap-5">
@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* Static */}
       <section id="statistics" className="py-5">
-        <HeaderContent title={"Statistics"} />
+        <HeaderContent border title={"Statistics"} />
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 pt-5 text-center">
           <div className="p-4">
@@ -227,7 +227,7 @@ export default function Home() {
 
       {/* Feed back */}
       <section id="feedback" className="py-10">
-        <HeaderContent title={"Feedback"} />
+        <HeaderContent border title={"Feedback"} />
 
         <div className="pt-5 overflow-hidden" ref={feedbackRef}>
           <div className="flex items-center md:px-5 md:gap-5">
@@ -329,7 +329,7 @@ export default function Home() {
 
       {/* Customer */}
       <section id="customer" className="py-10">
-        <HeaderContent title={"Customer"} />
+        <HeaderContent border title={"Customer"} />
 
         <div className="pt-10 overflow-hidden" ref={customerRef}>
           <div className="flex items-center md:px-5 md:gap-5">
@@ -354,7 +354,7 @@ export default function Home() {
 
       {/* Frequently Asked Questions */}
       <section className="py-10">
-        <HeaderContent title={"Frequently Asked Questions"} />
+        <HeaderContent border title={"Frequently Asked Questions"} />
 
         <div className="py-10">
           <Collapse
