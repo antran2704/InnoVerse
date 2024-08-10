@@ -22,7 +22,7 @@ const settingFeedbackSwiper: SwiperProps = {
   className: "!py-5 !px-2",
   freeMode: true,
   breakpoints: {
-    640: {
+    0: {
       slidesPerView: 1,
     },
     768: {
@@ -47,7 +47,7 @@ const settingCustomerSwiper: SwiperProps = {
   className: "!py-5 !px-2",
   freeMode: true,
   breakpoints: {
-    640: {
+    0: {
       slidesPerView: 3,
     },
     768: {
