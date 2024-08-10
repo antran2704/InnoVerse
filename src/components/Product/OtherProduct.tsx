@@ -1,47 +1,51 @@
-import useEmblaCarousel from "embla-carousel-react";
+"use client";
 
-import { HeaderContent } from "../Core";
+import { SwiperProps, SwiperSlide } from "swiper/react";
+
+import { Carousel, HeaderContent } from "../Core";
 import { IProduct } from "~/interface/Product";
 import ProductItem from "./ProductItem";
+import { Autoplay } from "swiper/modules";
 
 interface Props {
   items: IProduct[];
 }
 
+const settingSwiper: SwiperProps = {
+  spaceBetween: 20,
+  loop: true,
+  modules: [Autoplay],
+  className: "!py-5 !px-2",
+  freeMode: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+};
+
 const OtherProduct = (props: Props) => {
   const { items } = props;
-
-  const [otherProductRef] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    breakpoints: {
-      "(min-width: 1024px)": {
-        slidesToScroll: 4,
-      },
-      "(min-width: 768px)": {
-        slidesToScroll: 3,
-      },
-      "(min-width: 0px)": {
-        slidesToScroll: 2,
-      },
-    },
-  });
 
   return (
     <section className="py-10">
       <HeaderContent title={"Other Product"} align="left" />
 
-      <div className="py-5 overflow-hidden" ref={otherProductRef}>
-        <div className="flex items-center">
-          {items.map((item: IProduct, index: number) => (
-            <div
-              key={index}
-              className="lg:min-w-[24%] md:min-w-[31%] min-w-[48%] mr-5">
-              <ProductItem product={item} />
-            </div>
-          ))}
+        <div className="py-5">
+          <Carousel setting={settingSwiper}>
+            {items.map((item: IProduct, index: number) => (
+              <SwiperSlide key={index}>
+                <ProductItem product={item} />
+              </SwiperSlide>
+            ))}
+          </Carousel>
         </div>
-      </div>
     </section>
   );
 };

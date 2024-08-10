@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
-import { LOGO_IMAGE } from "~/common/imgae";
+import { LOGO_IMAGE } from "~/common/image";
 
 import navbarItems from "~/common/Navbar/data";
 
@@ -34,7 +34,7 @@ const Navbar = () => {
                 src={LOGO_IMAGE}
                 alt="InnoVerse Logo"
                 title="InnoVerse Logo"
-                className="min-w-[100px] w-[100px] h-[60px] object-contain object-center"
+                className="min-w-[160px] w-[160px] h-[60px] object-contain object-center"
                 width={100}
                 height={100}
                 loading="lazy"
@@ -88,7 +88,7 @@ const Navbar = () => {
               src={LOGO_IMAGE}
               alt="InnoVerse Logo"
               title="InnoVerse Logo"
-              className="min-w-[100px] w-[100px] h-[80px] object-contain object-center"
+              className="min-w-[180px] w-[180px] h-[80px] object-contain object-center"
               width={100}
               height={100}
               loading="lazy"

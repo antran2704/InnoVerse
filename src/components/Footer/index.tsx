@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LOGO_IMAGE } from "~/common/imgae";
+import { LOGO_IMAGE } from "~/common/image";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
               src={LOGO_IMAGE}
               alt="InnoVerse Logo"
               title="InnoVerse Logo"
-              className="min-w-[100px] w-[100px] h-[80px] md:mx-0 mx-auto object-contain object-center"
+              className="min-w-[200px] w-[200px] h-[80px] md:mx-0 mx-auto object-contain object-center"
               width={100}
               height={100}
               loading="lazy"
