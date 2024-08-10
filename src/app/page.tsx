@@ -230,7 +230,7 @@ export default function Home() {
         <HeaderContent border title={"Feedback"} />
 
         <div className="pt-5 overflow-hidden" ref={feedbackRef}>
-          <div className="flex items-center md:px-5 md:gap-5">
+          <div className="flex items-center pl-5 gap-5">
             <div className="lg:min-w-[33.333333%] md:min-w-[50%] min-w-full">
               <div className="h-full bg-gray-100 p-8 rounded-md">
                 <p className="leading-relaxed mb-6">
@@ -332,7 +332,7 @@ export default function Home() {
         <HeaderContent border title={"Customer"} />
 
         <div className="pt-10 overflow-hidden" ref={customerRef}>
-          <div className="flex items-center md:px-5 md:gap-5">
+          <div className="flex items-center pl-5 gap-5">
             {listCustomer.map((item, index) => (
               <div
                 key={index}

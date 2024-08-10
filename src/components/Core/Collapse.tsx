@@ -1,3 +1,6 @@
+
+"use client";
+
 import clsx from "clsx";
 import { useRef, useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";

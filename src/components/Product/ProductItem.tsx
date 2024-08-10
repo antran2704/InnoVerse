@@ -10,7 +10,7 @@ const ProductItem = (props: Props) => {
 
   return (
     <div className="w-full bg-white rounded-lg shadow-md hover:lg:scale-105 overflow-hidden transition-all ease-linear duration-100">
-      <Link href={product.path} className="block relative pb-[100%] overflow-hidden">
+      <Link href={`/products/${product.slug}`} className="block relative pb-[100%] overflow-hidden">
         <img
           alt={product.title}
           title={product.title}
@@ -21,7 +21,7 @@ const ProductItem = (props: Props) => {
           src={product.thumbnail}
         />
       </Link>
-      <Link href={product.path} className="block px-3 py-5">
+      <Link href={`/products/${product.slug}`} className="block px-3 py-5">
         <h2 className="text-gray-900 title-font sm:text-lg text-base font-medium line-clamp-3">
           {product.title}
         </h2>
