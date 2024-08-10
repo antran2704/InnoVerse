@@ -230,8 +230,8 @@ export default function Home() {
         <HeaderContent border title={"Feedback"} />
 
         <div className="pt-5 overflow-hidden" ref={feedbackRef}>
-          <div className="flex items-center pl-5 gap-5">
-            <div className="lg:min-w-[33.333333%] md:min-w-[50%] min-w-full">
+          <div className="flex items-center">
+            <div className="lg:min-w-[32%] md:min-w-[50%] min-w-full mr-5">
               <div className="h-full bg-gray-100 p-8 rounded-md">
                 <p className="leading-relaxed mb-6">
                   Synth chartreuse iPhone lomo cray raw denim brunch everyday
@@ -254,7 +254,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="lg:min-w-[33.333333%] md:min-w-[50%] min-w-full">
+            <div className="lg:min-w-[32%] md:min-w-[50%] min-w-full mr-5">
               <div className="h-full bg-gray-100 p-8 rounded-md">
                 <p className="leading-relaxed mb-6">
                   Synth chartreuse iPhone lomo cray raw denim brunch everyday
@@ -277,7 +277,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="lg:min-w-[33.333333%] md:min-w-[50%] min-w-full">
+            <div className="lg:min-w-[32%] md:min-w-[50%] min-w-full mr-5">
               <div className="h-full bg-gray-100 p-8 rounded-md">
                 <p className="leading-relaxed mb-6">
                   Synth chartreuse iPhone lomo cray raw denim brunch everyday
@@ -300,7 +300,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="lg:min-w-[33.333333%] md:min-w-[50%] min-w-full">
+            <div className="lg:min-w-[32%] md:min-w-[50%] min-w-full mr-5">
               <div className="h-full bg-gray-100 p-8 rounded-md">
                 <p className="leading-relaxed mb-6">
                   Synth chartreuse iPhone lomo cray raw denim brunch everyday
@@ -332,11 +332,11 @@ export default function Home() {
         <HeaderContent border title={"Customer"} />
 
         <div className="pt-10 overflow-hidden" ref={customerRef}>
-          <div className="flex items-center pl-5 gap-5">
+          <div className="flex items-center">
             {listCustomer.map((item, index) => (
               <div
                 key={index}
-                className="lg:min-w-[16.666667%;] md:min-w-[25%] min-w-[33.333333%] h-[80px]">
+                className="lg:min-w-[15%] md:min-w-[24%] min-w-[32%] h-[80px] mr-5">
                 <img
                   alt="customer"
                   title="customer"

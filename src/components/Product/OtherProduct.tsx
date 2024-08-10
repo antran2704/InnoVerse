@@ -32,11 +32,11 @@ const OtherProduct = (props: Props) => {
       <HeaderContent title={"Other Product"} align="left" />
 
       <div className="py-5 overflow-hidden" ref={otherProductRef}>
-        <div className="flex items-center pl-5 gap-5">
+        <div className="flex items-center">
           {items.map((item: IProduct, index: number) => (
             <div
               key={index}
-              className="lg:min-w-[24%] md:min-w-[32%] min-w-[50%]">
+              className="lg:min-w-[24%] md:min-w-[31%] min-w-[48%] mr-5">
               <ProductItem product={item} />
             </div>
           ))}

@@ -9,7 +9,7 @@ import { ProductItem } from "~/components/Product";
 
 import { IProduct } from "~/interface/Product";
 import { parseQueryString } from "~/helper/url";
-import {  useMemo } from "react";
+import { useMemo } from "react";
 
 const ListProductLayout = () => {
   const router = useRouter();
@@ -34,17 +34,17 @@ const ListProductLayout = () => {
             <ProductItem key={index} product={item} />
           ))}
         </div>
-      </section>
 
-      <div className="flex items-center justify-center">
-        <Pagination
-          total={Math.ceil(productList.length / 12)}
-          page={page}
-          size="lg"
-          onChange={onChangePage}
-          color="primary"
-        />
-      </div>
+        <div className="flex items-center justify-center">
+          <Pagination
+            total={Math.ceil(productList.length / 12)}
+            page={page}
+            size="lg"
+            onChange={onChangePage}
+            color="primary"
+          />
+        </div>
+      </section>
     </div>
   );
 };

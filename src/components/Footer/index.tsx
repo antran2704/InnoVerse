@@ -4,7 +4,7 @@ import { LOGO_IMAGE } from "~/common/imgae";
 const Footer = () => {
   return (
     <footer className="text-gray-600 body-font">
-      <div className="container__custom md:py-24 py-10 mx-auto flex items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div className="container__custom md:py-12 py-8 mx-auto flex items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <Link href="/">
             <img
