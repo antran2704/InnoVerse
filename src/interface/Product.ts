@@ -1,7 +1,7 @@
 interface IProduct {
     title: string;
     thumbnail: string;
-    description: string;
+    description: string[];
     gallery: string[];
     slug: string;
 }

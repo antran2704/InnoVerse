@@ -1,14 +1,16 @@
 const listCustomer: string[] = [
-    "/images/customer/1.png",
-    "/images/customer/2.png",
-    "/images/customer/3.png",
-    "/images/customer/4.png",
-    "/images/customer/5.png",
-    "/images/customer/6.png",
-    "/images/customer/7.png",
-    "/images/customer/8.png",
-    "/images/customer/9.png",
-    "/images/customer/10.png",
+    "/images/customer/1.webp",
+    "/images/customer/2.webp",
+    "/images/customer/3.webp",
+    "/images/customer/4.webp",
+    "/images/customer/5.webp",
+    "/images/customer/6.webp",
+    "/images/customer/7.webp",
+    "/images/customer/8.webp",
+    "/images/customer/9.webp",
+    "/images/customer/10.webp",
+    "/images/customer/11.webp",
+    "/images/customer/12.webp",
 ];
 
 export default listCustomer;

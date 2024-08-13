@@ -22,7 +22,7 @@ const ProductItem = (props: Props) => {
         />
       </Link>
       <Link href={`/products/${product.slug}`} className="block px-3 py-5">
-        <h2 className="text-gray-900 title-font sm:text-lg text-base font-medium line-clamp-3">
+        <h2 className="text-gray-900 h-[52px] title-font sm:text-lg text-base font-medium line-clamp-2 overflow-hidden">
           {product.title}
         </h2>
       </Link>

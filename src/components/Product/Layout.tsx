@@ -33,11 +33,13 @@ const ProductLayout = (props: Props) => {
           </div>
 
           <div className="lg:w-1/2 w-full">
-            <h1 className="lg:text-3xl sm:text-2xl text-xl font-medium mb-5">
+            <h1 className="lg:text-3xl sm:text-2xl text-xl font-medium lg:text-start text-center mb-5">
               {data.title}
             </h1>
 
-            <h2 className="md:text-base text-sm">{data.description}</h2>
+            {data.description.map((item: string, index: number) => (
+              <h2 key={index} className="md:text-base text-sm">{item}</h2>
+            ))}
           </div>
         </section>
 

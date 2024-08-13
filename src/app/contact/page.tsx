@@ -1,45 +1,37 @@
 const ContactPage = () => {
   return (
-   <div className="bg-[#f8fafc]">
+    <div className="bg-[#f8fafc]">
       <section className="container__custom flex items-center justify-center px-5 py-10">
-        <div className="lg:w-1/2 md:w-1/2 flex flex-col gap-10">
+        <div className="lg:w-1/2 md:w-2/3 w-full flex flex-col gap-10">
           <div className="flex items-start justify-between gap-5">
             <div>
               <h1 className="lg:text-4xl md:text-3xl text-2xl font-medium mb-5">
                 Contact
               </h1>
-  
-              {/* address */}
+
               <div className="flex flex-col gap-5">
-                <div>
-                  <h2 className="sm:text-base text-sm">Địa chỉ chúng tôi</h2>
-                  <p className="sm:text-base text-sm font-medium">xxxx, xxxx, xxxx</p>
-                </div>
-  
                 {/* email */}
                 <div>
-                  <h2 className="sm:text-base text-sm">Email chúng tôi</h2>
-                  <p className="sm:text-base text-sm font-medium">
-                    phamtrangiaan27@gmail.com
-                  </p>
+                  <h2 className="sm:text-base text-sm">Email của chúng tôi</h2>
+                  <a
+                    href="mailto:sales@innoverse.vn"
+                    className="sm:text-base text-sm font-medium hover:text-primary-100">
+                    sales@innoverse.vn
+                  </a>
                 </div>
-  
+
                 {/* address */}
                 <div>
                   <h2 className="sm:text-base text-sm">Điện thoại</h2>
-                  <p className="sm:text-base text-sm font-medium">0946003XX</p>
-                </div>
-  
-                {/* time work */}
-                <div>
-                  <h2 className="sm:text-base text-sm">Thời gian làm việc</h2>
-                  <p className="sm:text-base text-sm font-medium">
-                    Thứ 2 đến Thứ 6 từ 8h đến 17h
-                  </p>
+                  <a
+                    href="tel:0943743753"
+                    className="sm:text-base text-sm font-medium hover:text-primary-100">
+                    0943743753
+                  </a>
                 </div>
               </div>
             </div>
-  
+
             <img
               src="/images/contact_us.png"
               alt="contact us"
@@ -69,7 +61,9 @@ const ContactPage = () => {
               />
             </div>
             <div className="relative mb-4">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-600">
+              <label
+                htmlFor="email"
+                className="leading-7 text-sm text-gray-600">
                 Email
               </label>
               <input
@@ -96,7 +90,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-   </div>
+    </div>
   );
 };
 

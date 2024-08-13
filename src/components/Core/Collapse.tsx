@@ -1,4 +1,3 @@
-
 "use client";
 
 import clsx from "clsx";
@@ -7,11 +6,11 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 interface Props {
   title: string;
-  content: string;
+  children: JSX.Element;
 }
 
 const Collapse = (prop: Props) => {
-  const { title, content } = prop;
+  const { title, children } = prop;
 
   const contentRef = useRef<HTMLDivElement>(null);
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -47,8 +46,8 @@ const Collapse = (prop: Props) => {
       {/* content */}
       <div
         ref={contentRef}
-        className="h-0 transition-all ease-linear duration-100 overflow-hidden">
-        <p className="sm:text-base text-sm text-neutral- p-2">{content}</p>
+        className={clsx("h-0 transition-all ease-linear duration-100 overflow-hidden", [isShow && "mt-2"])}>
+        {children}
       </div>
     </div>
   );

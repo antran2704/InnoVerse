@@ -1,33 +1,73 @@
 "use client";
 
+import { SwiperProps, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
 import clsx from "clsx";
-import { CiCircleCheck } from "react-icons/ci";
-import { HeaderContent } from "~/components/Core";
+import { Carousel, HeaderContent } from "~/components/Core";
+
+const settingTeamSwiper: SwiperProps = {
+  spaceBetween: 20,
+  loop: true,
+  modules: [Autoplay],
+  speed: 2000,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  className: "!py-5 !px-2",
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    425: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+};
 
 const AboutUsPage = () => {
   return (
     <div className="container__custom">
-      <section className="text-gray-600 body-font p-5">
+      <section id="about-us" className="text-gray-600 body-font p-5">
         <div className="container px-5 py-10 mx-auto">
           <div className="flex lg:flex-row flex-col items-center w-full mb-10 gap-10">
             <div className="lg:w-1/2 w-full">
               <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold mb-2 text-gray-900 lg:text-left text-center capitalize">
-                About InnoVerse
+                Giới thiệu về InnoVerse
               </h1>
               <div className="w-full">
                 <p
                   data-aos="fade-right"
                   data-aos-duration="1000"
-                  className="leading-relaxed text-gray-500 text-justify">
-                  Furnidepot is the nation’s largest supplier of structural
-                  building products, value-added components and services to the
-                  professional market for new residential construction and
-                  repair and remodeling. Our focus is on providing unparalleled
-                  service to both large and small customers. Through investments
-                  in innovation and an unmatched portfolio of value-added
-                  products and manufacturing capabilities, we’re revolutionizing
-                  the homebuilding industry – outperforming today and
-                  transforming tomorrow.
+                  className="leading-relaxed text-gray-600 py-2">
+                  <strong>InnoVerse Solutions</strong> là công ty Phần mềm và
+                  Dịch vụ chuyên Tư vấn Chuyển đổi số, Tư vấn Giải pháp công
+                  nghệ, Giải pháp Quản trị doanh nghiệp, Giải pháp Ứng dụng
+                  Blockchain, Dịch vụ AI.
+                </p>
+
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  className="leading-relaxed text-gray-600 py-2">
+                  Công ty hoạt động{" "}
+                  <strong>
+                    dựa trên đội ngũ nhân viên Công nghệ năng động, sáng tạo và
+                    đội ngũ Quản lý, Chuyên gia Công ty hoạt động{" "}
+                  </strong>
+                  , Kinh doanh nhiều kinh nghiệp với mong muốn hỗ trợ khách hàng
+                  <strong>
+                    tăng trưởng và hiệu quả trong sản xuất kinh doanh
+                  </strong>
+                  .
                 </p>
               </div>
             </div>
@@ -45,7 +85,9 @@ const AboutUsPage = () => {
       </section>
 
       {/* Vision */}
-      <section className="bg-[#f0ede9] text-gray-600 rounded-md body-font p-5">
+      <section
+        id="vision"
+        className="bg-[#f0ede9] text-gray-600 rounded-md body-font p-5">
         <div className="container px-5 py-10 mx-auto">
           <div className="flex lg:flex-row-reverse flex-col items-center w-full mb-10 gap-10">
             <div className="lg:w-1/2 w-full">
@@ -53,26 +95,29 @@ const AboutUsPage = () => {
                 className={clsx(
                   "md:text-3xl text-2xl capitalize font-semibold lg:text-right text-center",
                 )}>
-                Vision
+                Tầm nhìn
               </h2>
 
               <div className="w-full pt-5">
-                <p className="leading-relaxed text-gray-500 text-justify">
-                  Furni Design will be the perfect choice for those looking to
-                  trust a strong team of architects, interior designers,
-                  engineers, and skilled machinists to create and construct
-                  projects that will improve the quality of life in the country
-                  and abroad. We take each project step by step, from the
-                  initial concept creation, through the implementation and
-                  finishing of the construction.
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Trở thành đối tác tin cậy hàng đầu trong lĩnh vực cung cấp
+                  dịch vụ công nghệ toàn diện. Cam kết tạo ra các sản phẩm và
+                  dịch vụ tiên tiến, đột phá để giải quyết các vấn đề hiện tại
+                  và mở ra cơ hội mới cho tương lai.
                 </p>
-                <p className="leading-relaxed text-gray-500 text-justify pt-5">
-                  Unlike other companies that only provide design services and
-                  not the actual production of furniture, at Furni Depot, we are
-                  here to take care of the entire process from designing to
-                  producing the interior products according to your
-                  specifications. That why so many customers choose Furni Depot
-                  to be their partner in providing quality solutions.
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Xây dựng công nghệ không chỉ mang lại lợi ích kinh tế mà còn
+                  tạo ra sự thay đổi tích cực trong xã hội, cải thiện cuộc sống
+                  và môi trường.
+                </p>
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Đặt khách hàng làm trung tâm, cung cấp trải nghiệm người dùng
+                  xuất sắc và giải quyết nhu cầu của họ thông qua công nghệ.
+                </p>
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Tạo ra các nền tảng và giải pháp giúp kết nối con người và
+                  doanh nghiệp, đồng thời khuyến khích hợp tác và làm việc
+                  chung.
                 </p>
               </div>
             </div>
@@ -90,19 +135,35 @@ const AboutUsPage = () => {
       </section>
 
       {/* Brand message */}
-      <section className="text-gray-600 body-font pt-10">
+      <section id="brand-message" className="text-gray-600 body-font pt-10">
         <div className="container px-5 py-10 mx-auto">
           <div className="flex flex-col items-center w-full mb-10 gap-10">
             <div className="lg:w-3/4 w-full">
-              <HeaderContent title={"Brand Message"} align="center" border />
+              <HeaderContent title={"Mục tiêu"} align="center" border />
               <div className="w-full pt-5">
-                <p className="leading-relaxed text-[#5a6066] text-justify">
-                  At Furni Design, we value creativity and uniqueness above all
-                  else. Our professional team will create a product that
-                  transcends mere utility and becomes an artful masterpiece, a
-                  bridge between you and Furni Depot. We strive for excellence,
-                  setting ourselves apart from the competition by offering
-                  something truly different. With us, you will be one of a kind.
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Chúng tôi không ngừng đổi mới để mang đến công nghệ tiên
+                  phong, giúp bạn vượt qua mọi thử thách và mở ra những cơ hội
+                  mới.
+                </p>
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Giải pháp công nghệ của chúng tôi giúp bạn tối ưu hóa quy
+                  trình, nâng cao hiệu quả và đạt được mục tiêu một cách dễ
+                  dàng.
+                </p>
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Chúng tôi đặt khách hàng lên hàng đầu, cam kết lắng nghe và
+                  đáp ứng nhu cầu của bạn bằng những sản phẩm và dịch vụ tốt
+                  nhất.
+                </p>
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Bảo mật thông tin của bạn là ưu tiên hàng đầu của chúng tôi.
+                  Chúng tôi cam kết mang đến sự tin cậy và bảo vệ thông tin cá
+                  nhân của bạn.
+                </p>
+                <p className="leading-relaxed text-gray-600 py-2">
+                  Công nghệ của chúng tôi không chỉ là sản phẩm; đó là giải pháp
+                  giúp cải thiện cuộc sống và công việc của bạn mỗi ngày.
                 </p>
               </div>
             </div>
@@ -124,57 +185,189 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Why choose */}
-      <section id="why" className="py-5">
-        <HeaderContent title={"Why choose InnoVerse"} border />
+      {/* Team */}
+      <section id="team" className="py-10">
+        <HeaderContent border title={"Thành viên"} />
 
-        <div className="flex md:flex-row flex-col items-center justify-between py-10 gap-10">
-          <ul className="md:w-1/2 w-full flex flex-col list-disc gap-5">
-            <li className="flex items-start lg:text-lg text-base gap-5">
-              <CiCircleCheck className="min-w-6 size-6" />
-              <p>
-                <strong>Innovative Products</strong>: Cutting-edge products and
-                solutions.
-              </p>
-            </li>
-            <li className="flex items-start lg:text-lg text-base gap-5">
-              <CiCircleCheck className="min-w-6 size-6" />
-              <p>
-                <strong>Reliability</strong>: High performance and durability.
-              </p>
-            </li>
-            <li className="flex items-start lg:text-lg text-base gap-5">
-              <CiCircleCheck className="min-w-6 size-6" />
-              <p>
-                <strong>User Experience</strong>: Intuitive and easy-to-use
-                interfaces.
-              </p>
-            </li>
-            <li className="flex items-start lg:text-lg text-base gap-5">
-              <CiCircleCheck className="min-w-6 size-6" />
-              <p>
-                <strong>Support</strong>:Excellent customer service and support.
-              </p>
-            </li>
-            <li className="flex items-start md:text-lg text-base gap-5">
-              <CiCircleCheck className="min-w-6 size-6" />
-              <p>
-                <strong>Cost</strong>:Competitive pricing and good value.
-              </p>
-            </li>
-          </ul>
+        <div className="pt-10">
+          <Carousel setting={settingTeamSwiper}>
+            <SwiperSlide>
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src="/images/team/ho_thanh_binh.webp"
+                  alt="team"
+                  title="team"
+                  width={100}
+                  height={100}
+                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  loading="lazy"
+                />
 
-          <div className="md:w-1/2 w-3/4">
-            <img
-              className="w-full object-contain object-center"
-              src="/images/whyChoose.png"
-              width={100}
-              height={100}
-              alt="whyChoose"
-              title="why choose"
-              loading="lazy"
-            />
-          </div>
+                <div className="mt-2">
+                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                    Hồ Thanh Bình
+                  </h3>
+                  <h4 className="sm:text-base text-sm text-center">
+                    CIO InnoVerse Solutions
+                  </h4>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src="/images/team/nguyen_linh_thanh_nhan.webp"
+                  alt="team"
+                  title="team"
+                  width={100}
+                  height={100}
+                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  loading="lazy"
+                />
+
+                <div className="mt-2">
+                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                    Nguyễn Linh Thành Nhân
+                  </h3>
+                  <h4 className="sm:text-base text-sm text-center">
+                    Technical Leader
+                  </h4>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src="/images/team/thu.webp"
+                  alt="team"
+                  title="team"
+                  width={100}
+                  height={100}
+                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  loading="lazy"
+                />
+
+                <div className="mt-2">
+                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                    Huỳnh Thị Lệ Thu
+                  </h3>
+                  <h4 className="sm:text-base text-sm text-center">
+                    Business Analyst
+                  </h4>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src="/images/team/antran.webp"
+                  alt="team"
+                  title="team"
+                  width={100}
+                  height={100}
+                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  loading="lazy"
+                />
+
+                <div className="mt-2">
+                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                    Phạm Trần Gia Ân
+                  </h3>
+                  <h4 className="sm:text-base text-sm text-center">
+                    Front-end developer
+                  </h4>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src="/images/team/phuc.webp"
+                  alt="team"
+                  title="team"
+                  width={100}
+                  height={100}
+                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  loading="lazy"
+                />
+
+                <div className="mt-2">
+                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                    Nguyễn Khoa Minh Phúc
+                  </h3>
+                  <h4 className="sm:text-base text-sm text-center">
+                    Back-end developer
+                  </h4>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src="/images/team/khoa.webp"
+                  alt="team"
+                  title="team"
+                  width={100}
+                  height={100}
+                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  loading="lazy"
+                />
+
+                <div className="mt-2">
+                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                    Nguyễn Lê Anh Khoa
+                  </h3>
+                  <h4 className="sm:text-base text-sm text-center">
+                    Blockchain developer
+                  </h4>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src="/images/team/loc.webp"
+                  alt="team"
+                  title="team"
+                  width={100}
+                  height={100}
+                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  loading="lazy"
+                />
+
+                <div className="mt-2">
+                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                    Trần Hoàn Lộc
+                  </h3>
+                  <h4 className="sm:text-base text-sm text-center">
+                    Front-end developer
+                  </h4>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src="/images/team/duy.webp"
+                  alt="team"
+                  title="team"
+                  width={100}
+                  height={100}
+                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  loading="lazy"
+                />
+
+                <div className="mt-2">
+                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                    Phạm Quang Duy
+                  </h3>
+                  <h4 className="sm:text-base text-sm text-center">
+                    Mobile developer
+                  </h4>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Carousel>
         </div>
       </section>
     </div>

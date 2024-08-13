@@ -81,9 +81,9 @@ const Navbar = () => {
         <div
           className={clsx(
             "relative sm:w-2/4 w-3/4 h-full bg-white transition-all ease-linear duration-100 z-20",
-            [openNavbar ? "translate-x-0" : "-translate-x-full"],
+            [openNavbar ? "translate-x-0" : "-translate-x-[200%]"],
           )}>
-          <Link href="/" className="block p-5">
+          <Link href="/" className="block px-5 py-2">
             <img
               src={LOGO_IMAGE}
               alt="InnoVerse Logo"
@@ -95,7 +95,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <ul className="items-center justify-center py-10 gap-5">
+          <ul className="items-center justify-center py-5 gap-5">
             {navbarItems.map((item) => (
               <li key={item.id}>
                 <Link
