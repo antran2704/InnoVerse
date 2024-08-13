@@ -3,7 +3,7 @@ import { IProduct } from "~/interface/Product";
 const productList: IProduct[] = [
   {
     title:
-      "Neyul xây dựng giải pháp về marketting, saleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "Neyul xây dựng giải pháp về marketting, sale",
     description: [
       "Trang web dùng để giới thiệu các dịch vụ, giải pháp về marketing, sale",
       "Các tính năng chính:",
