@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left mx-auto text-center">
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-base mb-3">
               Home
             </h2>
             <nav className="list-none mb-10">
@@ -28,14 +28,14 @@ const Footer = () => {
                 <Link
                   href={"/#product"}
                   className="text-gray-600 hover:text-primary-100">
-                  Sản phẩm
+                  Product
                 </Link>
               </li>
               <li>
                 <Link
                   href={"/#why"}
                   className="text-gray-600 hover:text-primary-100">
-                  Tại sao nên chọn Innoverse
+                  Why choose Innoverse
                 </Link>
               </li>
               <li>
@@ -56,48 +56,48 @@ const Footer = () => {
                 <Link
                   href={"/#customer"}
                   className="text-gray-600 hover:text-primary-100">
-                  Khác hàng & Đối tác
+                  Partner & Customer
                 </Link>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-base mb-3">
               About us
             </h2>
             <nav className="list-none mb-10">
               <li>
                 <Link
-                  href={"/about#about-us"}
+                  href={"/about-us#about-us"}
                   className="text-gray-600 hover:text-primary-100">
-                  Giới thiệu
+                  Introduce
                 </Link>
               </li>
               <li>
                 <Link
-                  href={"/about#vision"}
+                  href={"/about-us#vision"}
                   className="text-gray-600 hover:text-primary-100">
-                  Tầm nhìn
+                  Vison
                 </Link>
               </li>
               <li>
                 <Link
-                  href={"/about#brand-message"}
+                  href={"/about-us#brand-message"}
                   className="text-gray-600 hover:text-primary-100">
-                  Mục tiêu
+                  Brand message
                 </Link>
               </li>
               <li>
                 <Link
-                  href={"/about#team"}
+                  href={"/about-us#team"}
                   className="text-gray-600 hover:text-primary-100">
-                  Thành viên
+                  Team
                 </Link>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-base mb-3">
               Contact
             </h2>
             <nav className="list-none mb-10">
@@ -110,7 +110,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <span>SDT: </span>
+                <span>Phone: </span>
                 <a
                   href="tel:0943743753"
                   className="text-gray-600 hover:text-primary-100">

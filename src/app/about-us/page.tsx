@@ -41,31 +41,31 @@ const AboutUsPage = () => {
           <div className="flex lg:flex-row flex-col items-center w-full mb-10 gap-10">
             <div className="lg:w-1/2 w-full">
               <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold mb-2 text-gray-900 lg:text-left text-center capitalize">
-                Giới thiệu về InnoVerse
+                About InnoVerse
               </h1>
               <div className="w-full">
                 <p
                   data-aos="fade-right"
                   data-aos-duration="1000"
                   className="leading-relaxed text-gray-600 py-2">
-                  <strong>InnoVerse Solutions</strong> là công ty Phần mềm và
-                  Dịch vụ chuyên Tư vấn Chuyển đổi số, Tư vấn Giải pháp công
-                  nghệ, Giải pháp Quản trị doanh nghiệp, Giải pháp Ứng dụng
-                  Blockchain, Dịch vụ AI.
+                  <strong>InnoVerse Solutions</strong> is a Software and Service
+                  company specializing in Digital Transformation Consulting,
+                  Technology Solution Consulting, Business Management Solutions,
+                  Blockchain Application Solutions, AI Services.
                 </p>
 
                 <p
                   data-aos="fade-right"
                   data-aos-duration="1000"
                   className="leading-relaxed text-gray-600 py-2">
-                  Công ty hoạt động{" "}
+                  The company operates based on{" "}
                   <strong>
-                    dựa trên đội ngũ nhân viên Công nghệ năng động, sáng tạo và
-                    đội ngũ Quản lý, Chuyên gia Công ty hoạt động{" "}
+                    a team of dynamic, creative Technology staff and a team of
+                    experienced Managers, Experts, and Sales
                   </strong>
-                  , Kinh doanh nhiều kinh nghiệp với mong muốn hỗ trợ khách hàng
+                  , with the desire to support customers in{" "}
                   <strong>
-                    tăng trưởng và hiệu quả trong sản xuất kinh doanh
+                    growth and efficiency in production and business.
                   </strong>
                   .
                 </p>
@@ -95,29 +95,23 @@ const AboutUsPage = () => {
                 className={clsx(
                   "md:text-3xl text-2xl capitalize font-semibold lg:text-right text-center",
                 )}>
-                Tầm nhìn
+                Vison
               </h2>
 
               <div className="w-full pt-5">
                 <p className="leading-relaxed text-gray-600 py-2">
-                  Trở thành đối tác tin cậy hàng đầu trong lĩnh vực cung cấp
-                  dịch vụ công nghệ toàn diện. Cam kết tạo ra các sản phẩm và
-                  dịch vụ tiên tiến, đột phá để giải quyết các vấn đề hiện tại
-                  và mở ra cơ hội mới cho tương lai.
+                  At InnoVerse Solutions, our vision is to harness the power of
+                  technology to unlock new possibilities and drive meaningful
+                  change in the world. We aspire to create a future where
+                  technology seamlessly integrates into everyday life, making it
+                  smarter, more efficient, and more accessible for everyone.
                 </p>
                 <p className="leading-relaxed text-gray-600 py-2">
-                  Xây dựng công nghệ không chỉ mang lại lợi ích kinh tế mà còn
-                  tạo ra sự thay đổi tích cực trong xã hội, cải thiện cuộc sống
-                  và môi trường.
-                </p>
-                <p className="leading-relaxed text-gray-600 py-2">
-                  Đặt khách hàng làm trung tâm, cung cấp trải nghiệm người dùng
-                  xuất sắc và giải quyết nhu cầu của họ thông qua công nghệ.
-                </p>
-                <p className="leading-relaxed text-gray-600 py-2">
-                  Tạo ra các nền tảng và giải pháp giúp kết nối con người và
-                  doanh nghiệp, đồng thời khuyến khích hợp tác và làm việc
-                  chung.
+                  We aim to create technologies that not only advance human
+                  progress but also protect and preserve our planet. This means
+                  investing in green technologies, reducing our carbon
+                  footprint, and promoting practices that contribute to a more
+                  sustainable future.
                 </p>
               </div>
             </div>
@@ -139,31 +133,23 @@ const AboutUsPage = () => {
         <div className="container px-5 py-10 mx-auto">
           <div className="flex flex-col items-center w-full mb-10 gap-10">
             <div className="lg:w-3/4 w-full">
-              <HeaderContent title={"Mục tiêu"} align="center" border />
+              <HeaderContent title={"Brand message"} align="center" border />
               <div className="w-full pt-5">
                 <p className="leading-relaxed text-gray-600 py-2">
-                  Chúng tôi không ngừng đổi mới để mang đến công nghệ tiên
-                  phong, giúp bạn vượt qua mọi thử thách và mở ra những cơ hội
-                  mới.
+                  At InnoVerse Solutions, we’re dedicated to pushing the
+                  boundaries of technology to create solutions that make life
+                  easier, smarter, and more connected. Our passion for
+                  innovation drives us to develop cutting-edge products and
+                  services that solve real-world problems, empower individuals,
+                  and transform industries.
                 </p>
                 <p className="leading-relaxed text-gray-600 py-2">
-                  Giải pháp công nghệ của chúng tôi giúp bạn tối ưu hóa quy
-                  trình, nâng cao hiệu quả và đạt được mục tiêu một cách dễ
-                  dàng.
-                </p>
-                <p className="leading-relaxed text-gray-600 py-2">
-                  Chúng tôi đặt khách hàng lên hàng đầu, cam kết lắng nghe và
-                  đáp ứng nhu cầu của bạn bằng những sản phẩm và dịch vụ tốt
-                  nhất.
-                </p>
-                <p className="leading-relaxed text-gray-600 py-2">
-                  Bảo mật thông tin của bạn là ưu tiên hàng đầu của chúng tôi.
-                  Chúng tôi cam kết mang đến sự tin cậy và bảo vệ thông tin cá
-                  nhân của bạn.
-                </p>
-                <p className="leading-relaxed text-gray-600 py-2">
-                  Công nghệ của chúng tôi không chỉ là sản phẩm; đó là giải pháp
-                  giúp cải thiện cuộc sống và công việc của bạn mỗi ngày.
+                  With a commitment to excellence and a focus on user-centric
+                  design, we bring you technology that seamlessly integrates
+                  into your world, enhancing your everyday experiences and
+                  unlocking new possibilities. Join us in shaping a future where
+                  technology elevates every aspect of life, and together, let’s
+                  build a smarter, more connected tomorrow.
                 </p>
               </div>
             </div>
@@ -187,7 +173,7 @@ const AboutUsPage = () => {
 
       {/* Team */}
       <section id="team" className="py-10">
-        <HeaderContent border title={"Thành viên"} />
+        <HeaderContent border title={"Team"} />
 
         <div className="pt-10">
           <Carousel setting={settingTeamSwiper}>
@@ -200,7 +186,6 @@ const AboutUsPage = () => {
                   width={100}
                   height={100}
                   className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                  loading="lazy"
                 />
 
                 <div className="mt-2">
@@ -222,7 +207,6 @@ const AboutUsPage = () => {
                   width={100}
                   height={100}
                   className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                  loading="lazy"
                 />
 
                 <div className="mt-2">
@@ -244,7 +228,6 @@ const AboutUsPage = () => {
                   width={100}
                   height={100}
                   className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                  loading="lazy"
                 />
 
                 <div className="mt-2">
@@ -266,7 +249,6 @@ const AboutUsPage = () => {
                   width={100}
                   height={100}
                   className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                  loading="lazy"
                 />
 
                 <div className="mt-2">
@@ -288,7 +270,6 @@ const AboutUsPage = () => {
                   width={100}
                   height={100}
                   className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                  loading="lazy"
                 />
 
                 <div className="mt-2">
@@ -310,7 +291,6 @@ const AboutUsPage = () => {
                   width={100}
                   height={100}
                   className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                  loading="lazy"
                 />
 
                 <div className="mt-2">
@@ -332,7 +312,6 @@ const AboutUsPage = () => {
                   width={100}
                   height={100}
                   className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                  loading="lazy"
                 />
 
                 <div className="mt-2">
@@ -354,7 +333,6 @@ const AboutUsPage = () => {
                   width={100}
                   height={100}
                   className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                  loading="lazy"
                 />
 
                 <div className="mt-2">

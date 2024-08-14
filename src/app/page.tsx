@@ -71,9 +71,10 @@ export default function Home() {
           </h1>
           <ReactTyped
             strings={[
-              "Phân tích và tư vấn",
-              "Phát triển mô hình AI",
-              "Phát triển website",
+              "Analysis and consulting",
+              "Develop AI models",
+              "Website development",
+              "App mobile development",
             ]}
             typeSpeed={80}
             backSpeed={50}
@@ -98,7 +99,7 @@ export default function Home() {
 
       {/* Products */}
       <section id="product" className="py-12">
-        <HeaderContent border title={"Sản phẩm"} />
+        <HeaderContent border title={"Product"} />
 
         <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 py-10 gap-5">
           {productList.map((item: IProduct, index: number) => (
@@ -109,46 +110,45 @@ export default function Home() {
 
       {/* Why choose */}
       <section id="why" className="py-10">
-        <HeaderContent border title={"Tại sao chọn Innoverse"} />
+        <HeaderContent border title={"Why choose Innoverse"} />
 
         <div className="flex md:flex-row flex-col items-center justify-between pt-5 gap-10">
           <ul className="md:w-1/2 w-full flex flex-col list-disc gap-5">
             <li className="flex items-start lg:text-lg text-base gap-5">
               <CiCircleCheck className="min-w-6 size-6" />
               <p>
-                <strong>Đội ngũ chuyên gia</strong>: Đội ngũ lập trình viên giàu
-                kinh nghiệm, am hiểu sâu rộng về nhiều nền tảng và công nghệ
-                khác nhau
+                <strong>Expert team</strong>: A team of experienced programmers
+                with in-depth knowledge of many different platforms and
+                technologies
               </p>
             </li>
             <li className="flex items-start lg:text-lg text-base gap-5">
               <CiCircleCheck className="min-w-6 size-6" />
               <p>
-                <strong>Quy trình làm việc chuyên nghiệp</strong>: Áp dụng các
-                phương pháp quản lý dự án hiện đại, đảm bảo chất lượng và tiến
-                độ.
+                <strong>Profesional</strong>: Apply modern project management
+                methods to ensure quality and progress.
               </p>
             </li>
             <li className="flex items-start lg:text-lg text-base gap-5">
               <CiCircleCheck className="min-w-6 size-6" />
               <p>
-                <strong>Công nghệ</strong>: Sử dụng các công nghệ mới nhất để
-                phát triển các sản phẩm phần mềm hiệu quả, đáp ứng nhu cầu đa
-                dạng của khách hàng.
+                <strong>Technology</strong>: Using the latest technologies to
+                develop efficient software products to meet diverse customer
+                needs.
               </p>
             </li>
             <li className="flex items-start md:text-lg text-base gap-5">
               <CiCircleCheck className="min-w-6 size-6" />
               <p>
-                <strong>Linh hoạt tùy biến</strong>:Chúng tôi cam kết đáp ứng
-                mọi yêu cầu của khách hàng, từ các dự án nhỏ đến các dự án lớn.
+                <strong>Flexible and customizable</strong>: We are committed to
+                meeting all customer requirements, from small to large projects.
               </p>
             </li>
             <li className="flex items-start lg:text-lg text-base gap-5">
               <CiCircleCheck className="min-w-6 size-6" />
               <p>
-                <strong>Bảo mật</strong>:Đảm bảo an toàn thông tin cho khách
-                hàng bằng các biện pháp bảo mật nghiêm ngặt.
+                <strong>Security</strong>: Ensure customer information security
+                with strict security measures.
               </p>
             </li>
           </ul>
@@ -401,7 +401,7 @@ export default function Home() {
 
       {/* Customer */}
       <section id="customer" className="py-10">
-        <HeaderContent border title={"Khách hàng & Đối tác"} />
+        <HeaderContent border title={"Partner & Customer"} />
 
         <div className="pt-10">
           <Carousel setting={settingCustomerSwiper}>
@@ -424,82 +424,60 @@ export default function Home() {
 
       {/* Frequently Asked Questions */}
       <section className="py-10">
-        <HeaderContent border title={"Những câu hỏi thường gặp"} />
+        <HeaderContent border title={"FAQ"} />
 
         <div className="py-10">
-          <Collapse title="Dịch vụ">
+          <Collapse title="Services">
             <ul className="flex flex-col px-8 list-decimal gap-2">
               <li>
-                <strong>Phát triển phần mềm theo yêu cầu</strong>: Ứng dụng
-                Website, App, hệ thống quản lý doanh nghiệp, phần mềm tích
-                hợp,...
+                <strong>Software Outsourcing</strong>: High-quality software
+                outsourcing, helping businesses reduce costs and focus on core
+                business.
               </li>
               <li>
-                <strong>Bảo trì, nâng cấp phần mềm</strong>: Sửa lỗi, cập nhật
-                tính năng, tối ưu hiệu năng, chuyển đổi phần mềm sang nền tảng
-                mới
+                <strong>AI development service</strong>: Leverage the power of
+                artificial intelligence with {"InnoVerse's"} own AI building
+                service.
               </li>
               <li>
-                <strong>Phân tích và tư vấn</strong>: Hiểu rõ nhu cầu và mục
-                tiêu của doanh nghiệp, Lựa chọn nền tảng phù hợp, Xây dựng chiếc
-                lược nội dung
+                <strong>Website development service</strong>: Turn ideas into
+                reality with {"InnoVerse's"} professional website building
+                service.
               </li>
               <li>
-                <strong>Phân tích và lên kế hoạch </strong>: Phân tích nhu cầu
-                và mục tiêu doanh nghiệp, Lựa chọn công nghệ và kiến trúc phù
-                hợp, Xây dựng tùy biến AI đáp ứng chính xác các nhu cầu cụ thể
-                của doanh nghiệp
-              </li>
-              <li>
-                <strong>Thiết kế giao diện</strong>: Thiết kế giao diện đẹp mắt,
-                thân thiện với người dùng, Tối ưu hóa trải nghiệm người dùng
-                trên mọi thiết bị
-              </li>
-              <li>
-                <strong>Phát triển website</strong>: Lập trình website bằng các
-                công nghệ hiện đại, Tích hợp các tính năng nâng cao (e-commerce,
-                blog...)
-              </li>
-              <li>
-                <strong>Thu thập và xử lý dữ liệu</strong>: Thu thập, làm sạch
-                và chuẩn hóa dữ liệu, Xây dựng cơ sở dữ liệu AI, Phân tích dữ
-                liệu lớn
-              </li>
-              <li>
-                <strong>Phát triển mô hình AI</strong>: Lựa chọn mô hình AI phù
-                hợp với từng bài toán cụ thể, Tối ưu hóa hiệu năng của mô hình
-              </li>
-              <li>
-                <strong>Phát triển ứng dụng Blockchain </strong>: Phát triển
-                Smart Contract, Xây dựng giao diện người dùng, Tích hợp với hệ
-                thống hiện có
+                <strong>Blockchain development service</strong>: Blockchain
+                technology is changing the world. InnoVerse will help your
+                business seize this opportunity by building safe, secure and
+                efficient Blockchain applications
               </li>
             </ul>
           </Collapse>
-          <Collapse title="Lĩnh vực">
+          <Collapse title="Industry">
             <ul className="px-4">
-              <li>+ Thương mại điện tử</li>
-              <li>+ Tài chính ngân hàng</li>
-              <li>+ Y tế</li>
-              <li>+ Giáo dục</li>
-              <li>+ Sản xuất</li>
+              <li>- E-commerce</li>
+              <li>- Banking and Finance</li>
+              <li>- Healthcare</li>
+              <li>- Education</li>
+              <li>- Manufacturing</li>
             </ul>
           </Collapse>
-          <Collapse title="Cam kết">
+          <Collapse
+            title="Commit
+">
             <ul className="px-4">
-              <li>- Đảm bảo chất lượng</li>
-              <li>- Bàn giao sản phẩm đúng thời hạn</li>
-              <li>- Bảo mật thông tin khách hàng tuyệt đối</li>
-              <li>- Hỗ trợ khách hàng 24/7</li>
+              <li>- Quality Assurance</li>
+              <li>- On-time Product Delivery</li>
+              <li>- Absolute Customer Information Confidentiality</li>
+              <li>- 24/7 Customer Support</li>
             </ul>
           </Collapse>
-          <Collapse title="Lợi ích">
+          <Collapse title="Benefits">
             <ul className="px-4">
-              <li>- Tiết kiệm chi phí</li>
-              <li>- Nâng cao hiệu quả</li>
-              <li>- Tiếp cận công nghệ mới</li>
-              <li>- Giám rủi ro</li>
-              <li>- Nâng cao năng lực cạnh tranh</li>
+              <li>- Cost savings</li>
+              <li>- Improve efficiency</li>
+              <li>- Access to new technology</li>
+              <li>- Risk management</li>
+              <li>- Improve competitiveness</li>
             </ul>
           </Collapse>
         </div>

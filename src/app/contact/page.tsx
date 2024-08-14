@@ -12,7 +12,7 @@ const ContactPage = () => {
               <div className="flex flex-col gap-5">
                 {/* email */}
                 <div>
-                  <h2 className="sm:text-base text-sm">Email của chúng tôi</h2>
+                  <h2 className="sm:text-base text-sm">Email</h2>
                   <a
                     href="mailto:sales@innoverse.vn"
                     className="sm:text-base text-sm font-medium hover:text-primary-100">
@@ -22,7 +22,7 @@ const ContactPage = () => {
 
                 {/* address */}
                 <div>
-                  <h2 className="sm:text-base text-sm">Điện thoại</h2>
+                  <h2 className="sm:text-base text-sm">Phone</h2>
                   <a
                     href="tel:0943743753"
                     className="sm:text-base text-sm font-medium hover:text-primary-100">
