@@ -5,18 +5,21 @@ import { SwiperProps, SwiperSlide } from "swiper/react";
 import { Carousel, HeaderContent } from "../Core";
 import { IProduct } from "~/interface/Product";
 import ProductItem from "./ProductItem";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 interface Props {
   items: IProduct[];
 }
 
-const settingSwiper: SwiperProps = {
+const settingProductSwiper: SwiperProps = {
+  modules: [Pagination],
   spaceBetween: 20,
   loop: true,
-  modules: [Autoplay],
-  className: "!py-5 !px-2",
+  className: "!py-10 !px-2",
   freeMode: true,
+  pagination: {
+    clickable: true,
+  },
   breakpoints: {
     0: {
       slidesPerView: 2,
@@ -38,7 +41,7 @@ const OtherProduct = (props: Props) => {
       <HeaderContent title={"Other Product"} align="left" />
 
         <div className="py-5">
-          <Carousel setting={settingSwiper}>
+          <Carousel setting={settingProductSwiper}>
             {items.map((item: IProduct, index: number) => (
               <SwiperSlide key={index}>
                 <ProductItem product={item} />

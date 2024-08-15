@@ -29,7 +29,7 @@ const ListProductLayout = () => {
       <section className="py-10">
         <HeaderContent title={"Products"} border />
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 py-10 gap-5">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 py-10 gap-5">
           {productList.map((item: IProduct, index: number) => (
             <ProductItem key={index} product={item} />
           ))}

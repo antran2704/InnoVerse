@@ -52,7 +52,6 @@ const productList: IProduct[] = [
       "The application allows users to order cars, food, and delivery.",
       "Feature:",
       "+ Booking: Car, Motorbike, Taxi, Delivery, Food Delivery, Grocery Delivery",
-      "+ Ví điện tử: Thanh toán qua ví điện tử",
       "+ E-wallet: Payment via e-wallet",
       "+ Loyalty program",
       "+ Share your journey",
