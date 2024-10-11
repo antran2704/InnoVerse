@@ -5,12 +5,14 @@ import { Autoplay } from "swiper/modules";
 
 import clsx from "clsx";
 import { Carousel, HeaderContent } from "~/components/Core";
+import { teams } from "~/common/team";
+import { ITeam } from "~/interface/Team";
 
 const settingTeamSwiper: SwiperProps = {
   spaceBetween: 20,
   loop: true,
   modules: [Autoplay],
-  speed: 2000,
+  speed: 1000,
   autoplay: {
     delay: 6000,
     disableOnInteraction: false,
@@ -177,174 +179,29 @@ const AboutUsPage = () => {
 
         <div className="pt-10">
           <Carousel setting={settingTeamSwiper}>
-            <SwiperSlide>
-              <div className="w-full flex flex-col items-center">
-                <img
-                  src="/images/team/ho_thanh_binh.webp"
-                  alt="team"
-                  title="team"
-                  width={100}
-                  height={100}
-                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                />
+            {teams.map((team: ITeam, index: number) => (
+              <SwiperSlide key={index}>
+                <div className="w-full flex flex-col items-center">
+                  <img
+                    src={team.img}
+                    alt="team"
+                    title="team"
+                    width={100}
+                    height={100}
+                    className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
+                  />
 
-                <div className="mt-2">
-                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
-                    Hồ Thanh Bình
-                  </h3>
-                  <h4 className="sm:text-base text-sm text-center">
-                    CIO InnoVerse Solutions
-                  </h4>
+                  <div className="mt-2">
+                    <h3 className="lmd:text-xl text-lg font-semibold text-center">
+                      {team.name}
+                    </h3>
+                    <h4 className="sm:text-base text-sm text-center">
+                      {team.role}
+                    </h4>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full flex flex-col items-center">
-                <img
-                  src="/images/team/nguyen_linh_thanh_nhan.webp"
-                  alt="team"
-                  title="team"
-                  width={100}
-                  height={100}
-                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                />
-
-                <div className="mt-2">
-                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
-                    Nguyễn Linh Thành Nhân
-                  </h3>
-                  <h4 className="sm:text-base text-sm text-center">
-                    Technical Leader
-                  </h4>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full flex flex-col items-center">
-                <img
-                  src="/images/team/thu.webp"
-                  alt="team"
-                  title="team"
-                  width={100}
-                  height={100}
-                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                />
-
-                <div className="mt-2">
-                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
-                    Huỳnh Thị Lệ Thu
-                  </h3>
-                  <h4 className="sm:text-base text-sm text-center">
-                    Business Analyst
-                  </h4>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full flex flex-col items-center">
-                <img
-                  src="/images/team/antran.webp"
-                  alt="team"
-                  title="team"
-                  width={100}
-                  height={100}
-                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                />
-
-                <div className="mt-2">
-                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
-                    Phạm Trần Gia Ân
-                  </h3>
-                  <h4 className="sm:text-base text-sm text-center">
-                    Front-end developer
-                  </h4>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full flex flex-col items-center">
-                <img
-                  src="/images/team/phuc.webp"
-                  alt="team"
-                  title="team"
-                  width={100}
-                  height={100}
-                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                />
-
-                <div className="mt-2">
-                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
-                    Nguyễn Khoa Minh Phúc
-                  </h3>
-                  <h4 className="sm:text-base text-sm text-center">
-                    Back-end developer
-                  </h4>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full flex flex-col items-center">
-                <img
-                  src="/images/team/khoa.webp"
-                  alt="team"
-                  title="team"
-                  width={100}
-                  height={100}
-                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                />
-
-                <div className="mt-2">
-                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
-                    Nguyễn Lê Anh Khoa
-                  </h3>
-                  <h4 className="sm:text-base text-sm text-center">
-                    Blockchain developer
-                  </h4>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full flex flex-col items-center">
-                <img
-                  src="/images/team/loc.webp"
-                  alt="team"
-                  title="team"
-                  width={100}
-                  height={100}
-                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                />
-
-                <div className="mt-2">
-                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
-                    Trần Hoàn Lộc
-                  </h3>
-                  <h4 className="sm:text-base text-sm text-center">
-                    Front-end developer
-                  </h4>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full flex flex-col items-center">
-                <img
-                  src="/images/team/duy.webp"
-                  alt="team"
-                  title="team"
-                  width={100}
-                  height={100}
-                  className="md:size-[200px] size-[140px] object-cover object-center rounded-full"
-                />
-
-                <div className="mt-2">
-                  <h3 className="lmd:text-xl text-lg font-semibold text-center">
-                    Phạm Quang Duy
-                  </h3>
-                  <h4 className="sm:text-base text-sm text-center">
-                    Mobile developer
-                  </h4>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Carousel>
         </div>
       </section>

@@ -102,20 +102,28 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <span>Email: </span>
+                <span className="text-sm">Email: </span>
                 <a
                   href="mailto:sales@innoverse.vn"
-                  className="text-gray-600 hover:text-primary-100">
+                  className="text-gray-600 hover:text-primary-100 text-sm">
                   sales@innoverse.vn
                 </a>
               </li>
               <li>
-                <span>Phone: </span>
+                <span className="text-sm">Phone: </span>
                 <a
                   href="tel:0943743753"
-                  className="text-gray-600 hover:text-primary-100">
+                  className="text-gray-600 hover:text-primary-100 text-sm">
                   0943743753
                 </a>
+              </li>
+              <li>
+                <span className="text-sm">Address: </span>
+                <span
+                  className="text-gray-600 text-sm">
+                  107 Duong 2, Khu Do Thi Van Phuc, Phuong Hiep Binh Phuoc,
+                  Thanh pho Thu Duc, Thanh pho Ho Chi Minh, Viet Nam
+                </span>
               </li>
             </nav>
           </div>
