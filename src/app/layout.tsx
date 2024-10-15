@@ -5,6 +5,7 @@ import "./globals.scss";
 import Footer from "~/components/Footer";
 import ScrollToTop from "~/components/ScrollToTop";
 import { NextUIProviders } from "~/components/Provider/NextUI";
+import ChatBox from "~/components/ChatBox";
 
 export const metadata: Metadata = {
   title: "InnoVerse",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <NextUIProviders>
           <Navbar />
           <main className="min-h-screen">{children}</main>
+          <ChatBox />
           <ScrollToTop />
           <Footer />
         </NextUIProviders>

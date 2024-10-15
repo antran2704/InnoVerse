@@ -28,7 +28,7 @@ const ScrollToTop = () => {
         "scroll-top fixed right-2 cursor-pointer py-2 px-2 rounded-md bg-neutral-600 shadow-lg transition-all ease-linear duration-150 z-[99]",
         [
           showScrollTop
-            ? "opacity-60 hover:opacity-100 md:bottom-12 bottom-5 "
+            ? "opacity-60 hover:opacity-100 bottom-5 "
             : "opacity-0 bottom-0 pointer-events-none",
         ],
       )}
