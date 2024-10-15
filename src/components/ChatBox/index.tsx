@@ -36,7 +36,7 @@ const ChatBox = () => {
           <MdOutlineKeyboardArrowLeft className="text-5xl" />
         </button>
         <iframe
-          src="http://152.42.223.155/chatbot/REJ5qUxi3z9r3YoG"
+          src="https://ai-demo.innoverse.vn/chatbot/REJ5qUxi3z9r3YoG"
           className={clsx(
             "h-full md:w-[600px] sm:min-h-[600px] sm:w-[400px] w-[360px] min-h-[500px] border shadow-lg rounded-lg overflow-hidden",
           )}
